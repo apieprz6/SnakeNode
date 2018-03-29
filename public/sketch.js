@@ -7,12 +7,12 @@ var movementScale = 20;
 
 function setup() {
 	frameRate(10);
-	createCanvas(800, 800);
+	createCanvas(800, 600);
 	snake = new Snake();
 	food = new Food();
 	food.setLocation();
 	
-	socket = io.connect('http://192.168.1.56:3000');
+	socket = io.connect('http://192.168.1.56:3000');	//CHANGE THIS TO YOUR TO SERVER ADDRESS
 	
 	socket.on('highScore', updateScore);
 }
